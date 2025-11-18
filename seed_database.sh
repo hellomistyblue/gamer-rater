@@ -2,9 +2,9 @@
 
 rm db.sqlite3
 rm -rf ./raterapi/migrations
-python3 manage.py migrate
-python3 manage.py makemigrations raterapi
-python3 manage.py migrate raterapi
-python3 manage.py loaddata users
-python3 manage.py loaddata tokens
-
+pipenv run python manage.py migrate
+pipenv run python manage.py makemigrations raterapi
+pipenv run python manage.py migrate raterapi
+pipenv run python manage.py loaddata users
+pipenv run python manage.py loaddata tokens
+pipenv run python manage.py loaddata categories
